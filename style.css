@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@300&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+:root {
+
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Darkdarkcyan: hsl(158, 42%, 18%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --bigg:32px;
+    --smol:14px;
+    --radius: 9px;
+    /* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--Cream);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+}
+
+.textbox {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 600px;
+    height: 450px;
+    background-color: var(--White);
+    border-radius: var(--radius);
+}
+
+.textbox__image #desktop-img {
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+
+    width: 300px;
+    /* display: inline; */
+    /* height: 450px; */
+}
+
+.textbox__image #mobile-img {
+    display: none;
+}
+
+
+.textbox__content {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    text-align: left;
+    align-items: center;
+    padding: 20px 32px;
+}
+
+.textbox__content--tag h3 {
+    font-family: 'Montserrat', sans-serif;
+    /* font-weight: 100; */
+    letter-spacing: 6px;
+    font-size: 11px;
+    color: var(--Darkgrayishblue);
+    /* padding-top: 24px; */
+}
+
+.textbox__content--bold h2 {
+    font-size: var(--bigg);
+    font-family: 'Fraunces', serif;
+    line-height: 32px;
+    /* font-weight: 800; */
+    /* font-size: 32px; */
+    color: var(--Verydarkblue);
+}
+
+.textbox__content--description h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--smol);
+    color: var(--Darkgrayishblue);
+    /* font-weight: 200; */
+    line-height: 24px;
+}
+
+.textbox__content--price {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.price--final h2 {
+    font-family: 'Fraunces', serif;
+    /* font-weight: 700; */
+    font-size: var(--bigg);
+    color: var(--Darkcyan);
+
+}
+
+.price--striked {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    color: var(--Darkgrayishblue);
+    text-decoration: line-through;
+    padding-left: 20px;
+}
+
+.textbox__content--cart {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    /* -webkit-border-radius: 8;
+    -moz-border-radius: 8; */
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 12px;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 8px;
+    height: 48px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--smol);
+    font-weight: 700;
+    color: var(--White);
+    background: var(--Darkcyan);
+    /* padding: 10px 20px 10px 20px; */
+    text-decoration: none;
+    /* margin-bottom: 24px; */
+}
+
+.btn:hover {
+    background: var(--Darkdarkcyan);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 
+.btn img{
+    right: 0;
+} */
+
+
+@media screen and (max-width: 800px) {
+    .textbox {
+        position: relative;
+        width: 343px;
+        height: 611px;
+        display: grid;
+        grid-template-rows: 240px 371px;
+        /* background-image: url(images/image-product-mobile.jpg);
+        background-repeat: no-repeat; */
+    }
+
+    .textbox__image {
+        height: 240px;
+    }
+
+    .textbox__image #desktop-img {
+        display: none;
+
+    }
+
+    .textbox__image #mobile-img{
+        /* display: grid; */
+        /* display: inline-block; */
+        display: block;
+        /* position: absolute; */
+        width: 343px;
+        height: 240px;
+        border-top-left-radius: var(--radius);
+        border-top-right-radius: var(--radius);
+    }
+    /* .textbox__content p, h1,h2,h3{
+        margin: 0;
+        padding: 0;
+    } */
+    .textbox__content{
+        
+        position: absolute;
+        /* height: 320px; */
+        /* width: 320px; */
+        top: 240px;
+        bottom: 0;
+        padding: 18px 24px;
+
+    }
+
+}
